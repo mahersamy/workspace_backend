@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="WorkforcePortal.Application/WorkforcePortal.Application.csproj" />
+  <Project Path="WorkforcePortal.Domain/WorkforcePortal.Domain.csproj" />
+  <Project Path="WorkforcePortal.Infrastructure/WorkforcePortal.Infrastructure.csproj" />
+  <Project Path="workspace_backend.csproj" />
+</Solution>

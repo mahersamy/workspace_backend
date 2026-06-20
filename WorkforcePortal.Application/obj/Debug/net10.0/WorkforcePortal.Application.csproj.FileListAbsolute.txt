@@ -1,0 +1,15 @@
+D:\PR\backend\workspace_backend\WorkforcePortal.Application\bin\Debug\net10.0\WorkforcePortal.Application.deps.json
+D:\PR\backend\workspace_backend\WorkforcePortal.Application\bin\Debug\net10.0\WorkforcePortal.Application.dll
+D:\PR\backend\workspace_backend\WorkforcePortal.Application\bin\Debug\net10.0\WorkforcePortal.Application.pdb
+D:\PR\backend\workspace_backend\WorkforcePortal.Application\bin\Debug\net10.0\WorkforcePortal.Domain.dll
+D:\PR\backend\workspace_backend\WorkforcePortal.Application\bin\Debug\net10.0\WorkforcePortal.Domain.pdb
+D:\PR\backend\workspace_backend\WorkforcePortal.Application\obj\Debug\net10.0\WorkforcePortal.Application.csproj.AssemblyReference.cache
+D:\PR\backend\workspace_backend\WorkforcePortal.Application\obj\Debug\net10.0\WorkforcePortal.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\PR\backend\workspace_backend\WorkforcePortal.Application\obj\Debug\net10.0\WorkforcePortal.Application.AssemblyInfoInputs.cache
+D:\PR\backend\workspace_backend\WorkforcePortal.Application\obj\Debug\net10.0\WorkforcePortal.Application.AssemblyInfo.cs
+D:\PR\backend\workspace_backend\WorkforcePortal.Application\obj\Debug\net10.0\WorkforcePortal.Application.csproj.CoreCompileInputs.cache
+D:\PR\backend\workspace_backend\WorkforcePortal.Application\obj\Debug\net10.0\Workforc.0AC8B296.Up2Date
+D:\PR\backend\workspace_backend\WorkforcePortal.Application\obj\Debug\net10.0\WorkforcePortal.Application.dll
+D:\PR\backend\workspace_backend\WorkforcePortal.Application\obj\Debug\net10.0\refint\WorkforcePortal.Application.dll
+D:\PR\backend\workspace_backend\WorkforcePortal.Application\obj\Debug\net10.0\WorkforcePortal.Application.pdb
+D:\PR\backend\workspace_backend\WorkforcePortal.Application\obj\Debug\net10.0\ref\WorkforcePortal.Application.dll

@@ -1,0 +1,11 @@
+D:\PR\backend\workspace_backend\WorkforcePortal.Domain\obj\Debug\net10.0\WorkforcePortal.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\PR\backend\workspace_backend\WorkforcePortal.Domain\obj\Debug\net10.0\WorkforcePortal.Domain.AssemblyInfoInputs.cache
+D:\PR\backend\workspace_backend\WorkforcePortal.Domain\obj\Debug\net10.0\WorkforcePortal.Domain.AssemblyInfo.cs
+D:\PR\backend\workspace_backend\WorkforcePortal.Domain\obj\Debug\net10.0\WorkforcePortal.Domain.csproj.CoreCompileInputs.cache
+D:\PR\backend\workspace_backend\WorkforcePortal.Domain\bin\Debug\net10.0\WorkforcePortal.Domain.deps.json
+D:\PR\backend\workspace_backend\WorkforcePortal.Domain\bin\Debug\net10.0\WorkforcePortal.Domain.dll
+D:\PR\backend\workspace_backend\WorkforcePortal.Domain\bin\Debug\net10.0\WorkforcePortal.Domain.pdb
+D:\PR\backend\workspace_backend\WorkforcePortal.Domain\obj\Debug\net10.0\WorkforcePortal.Domain.dll
+D:\PR\backend\workspace_backend\WorkforcePortal.Domain\obj\Debug\net10.0\refint\WorkforcePortal.Domain.dll
+D:\PR\backend\workspace_backend\WorkforcePortal.Domain\obj\Debug\net10.0\WorkforcePortal.Domain.pdb
+D:\PR\backend\workspace_backend\WorkforcePortal.Domain\obj\Debug\net10.0\ref\WorkforcePortal.Domain.dll

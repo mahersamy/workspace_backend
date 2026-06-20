@@ -1,0 +1,260 @@
+### ============================================================
+###  Workforce Portal API — HTTP Request Collection
+###  Version : 1.0.0
+###  Base URL : http://localhost:5012
+###  Auth     : JWT Bearer  (run Login first, copy token below)
+### ============================================================
+
+@baseUrl     = http://localhost:5012
+@apiVersion  = v1
+@api         = {{baseUrl}}/api
+@contentType = application/json
+
+### Paste the JWT token returned from Login here (no "Bearer " prefix)
+@token = YOUR_JWT_TOKEN_HERE
+
+
+# ──────────────────────────────────────────────
+#  🔐  AUTH
+# ──────────────────────────────────────────────
+
+### Login (seeded admin)
+# @name Login
+POST {{api}}/Auth/login
+Content-Type: {{contentType}}
+
+{
+  "username": "admin",
+  "password": "Admin123!"
+}
+
+###
+
+### Register a new user (open endpoint)
+POST {{api}}/Auth/register
+Content-Type: {{contentType}}
+
+{
+  "username": "john.doe",
+  "password": "Pass@1234",
+  "email": "john.doe@company.com",
+  "role": 2
+}
+
+###
+
+
+# ──────────────────────────────────────────────
+#  📊  DASHBOARD
+# ──────────────────────────────────────────────
+
+### Get dashboard statistics
+GET {{api}}/Dashboard/stats
+Authorization: Bearer {{token}}
+Accept: {{contentType}}
+
+###
+
+
+# ──────────────────────────────────────────────
+#  🏢  DEPARTMENTS
+# ──────────────────────────────────────────────
+
+### Get all departments (paginated)
+GET {{api}}/Departments?pageNumber=1&pageSize=10
+Authorization: Bearer {{token}}
+Accept: {{contentType}}
+
+###
+
+### Get department by ID
+GET {{api}}/Departments/1
+Authorization: Bearer {{token}}
+Accept: {{contentType}}
+
+###
+
+### Create department  [Admin only]
+POST {{api}}/Departments
+Authorization: Bearer {{token}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Engineering",
+  "description": "Software engineering and R&D"
+}
+
+###
+
+### Update department  [Admin only]
+PUT {{api}}/Departments/1
+Authorization: Bearer {{token}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Engineering",
+  "description": "Updated description"
+}
+
+###
+
+### Delete department  [Admin only]
+DELETE {{api}}/Departments/1
+Authorization: Bearer {{token}}
+
+###
+
+
+# ──────────────────────────────────────────────
+#  👤  EMPLOYEES
+# ──────────────────────────────────────────────
+
+### Get all employees (paginated)
+GET {{api}}/Employees?pageNumber=1&pageSize=10
+Authorization: Bearer {{token}}
+Accept: {{contentType}}
+
+###
+
+### Get employee by ID
+GET {{api}}/Employees/1
+Authorization: Bearer {{token}}
+Accept: {{contentType}}
+
+###
+
+### Create employee  [Admin, Manager]
+POST {{api}}/Employees
+Authorization: Bearer {{token}}
+Content-Type: {{contentType}}
+
+{
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "email": "jane.smith@company.com",
+  "phone": "+1-555-0100",
+  "position": "Senior Developer",
+  "departmentId": 1,
+  "hireDate": "2024-01-15",
+  "salary": 85000.00
+}
+
+###
+
+### Update employee  [Admin, Manager]
+PUT {{api}}/Employees/1
+Authorization: Bearer {{token}}
+Content-Type: {{contentType}}
+
+{
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "email": "jane.smith@company.com",
+  "phone": "+1-555-0101",
+  "position": "Lead Developer",
+  "departmentId": 1,
+  "salary": 95000.00,
+  "isActive": true
+}
+
+###
+
+### Delete employee  [Admin only]
+DELETE {{api}}/Employees/1
+Authorization: Bearer {{token}}
+
+###
+
+
+# ──────────────────────────────────────────────
+#  ✅  TASKS
+# ──────────────────────────────────────────────
+
+### Get all tasks (paginated)
+GET {{api}}/Tasks?pageNumber=1&pageSize=10
+Authorization: Bearer {{token}}
+Accept: {{contentType}}
+
+###
+
+### Get task by ID
+GET {{api}}/Tasks/1
+Authorization: Bearer {{token}}
+Accept: {{contentType}}
+
+###
+
+### Create task  [Admin, Manager]
+POST {{api}}/Tasks
+Authorization: Bearer {{token}}
+Content-Type: {{contentType}}
+
+{
+  "title": "Implement login feature",
+  "description": "Build JWT-based authentication for the portal",
+  "priority": 1,
+  "dueDate": "2024-07-30",
+  "assignedToEmployeeId": 1
+}
+
+###
+
+### Update task  [Admin, Manager]
+PUT {{api}}/Tasks/1
+Authorization: Bearer {{token}}
+Content-Type: {{contentType}}
+
+{
+  "title": "Implement login feature",
+  "description": "Updated description",
+  "priority": 2,
+  "dueDate": "2024-08-15",
+  "assignedToEmployeeId": 1
+}
+
+###
+
+### Update task status  (All authenticated users)
+# Status values: 0=Pending, 1=InProgress, 2=Completed, 3=Cancelled
+PATCH {{api}}/Tasks/1/status
+Authorization: Bearer {{token}}
+Content-Type: {{contentType}}
+
+2
+
+###
+
+### Delete task  [Admin only]
+DELETE {{api}}/Tasks/1
+Authorization: Bearer {{token}}
+
+###
+
+
+# ──────────────────────────────────────────────
+#  📋  AUDIT LOGS
+# ──────────────────────────────────────────────
+
+### Get audit logs (paginated)  [Admin only]
+GET {{api}}/AuditLogs?pageNumber=1&pageSize=20
+Authorization: Bearer {{token}}
+Accept: {{contentType}}
+
+###
+
+
+# ──────────────────────────────────────────────
+#  🔍  API DOCS
+# ──────────────────────────────────────────────
+
+### Scalar interactive UI
+GET {{baseUrl}}/scalar/{{apiVersion}}
+Accept: text/html
+
+###
+
+### OpenAPI JSON spec
+GET {{baseUrl}}/openapi/{{apiVersion}}.json
+Accept: {{contentType}}
+
+###
