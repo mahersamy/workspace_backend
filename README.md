@@ -57,7 +57,7 @@ In your API project's `appsettings.Development.json` (create it if it doesn't ex
     "SecretKey": "REPLACE_WITH_A_LONG_RANDOM_SECRET_KEY",
     "Issuer": "WorkforcePortal",
     "Audience": "WorkforcePortal",
-    "ExpiryMinutes": "60"
+    "ExpiryMinutes": "3000"
   }
 }
 ```
